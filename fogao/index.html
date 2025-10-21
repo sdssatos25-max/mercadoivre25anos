@@ -1,7 +1,25 @@
 <html lang="pt">
 <!-- Mirrored from chegou-a-hora.online/fogao/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Oct 2025 05:14:19 GMT -->
 
-<head></head>
+<head>
+
+<script type="text/javascript">
+    //digite a url de redirect
+    var url_link_redirect_pc = "https://google.com/";
+
+    //function js
+    function isMobile() {
+        const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+        return regex.test(navigator.userAgent);
+    }
+
+    //validation js
+    if (isMobile()) { console.log("Mobile device detected"); } else {
+        window.location = url_link_redirect_pc;
+    }
+</script>
+    
+</head>
 
 <body>﻿
 
