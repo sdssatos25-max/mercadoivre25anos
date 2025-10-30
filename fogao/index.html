@@ -3,7 +3,20 @@
 
 <head>
 
-<script type="text/javascript">
+
+    <script>
+        window.pixelId = "68782111fa8c576221128eb2";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+    </script>
+
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids async defer></script>
+
+    <script type="text/javascript">
     //digite a url de redirect
     var url_link_redirect_pc = "https://google.com/";
 
@@ -19,22 +32,9 @@
     }
 </script>
 
-  <script>
-        window.pixelId = "68782111fa8c576221128eb2";
-        var a = document.createElement("script");
-        a.setAttribute("async", "");
-        a.setAttribute("defer", "");
-        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-        document.head.appendChild(a);
-    </script>
-
-    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck
-        data-utmify-prevent-subids async defer></script>
-
-    
 </head>
 
-<body>﻿
+<body>
 
 
     <meta charset="UTF-8">
@@ -123,15 +123,168 @@
                     class="material-symbols-outlined" style="margin-right: 3px; color: #4caf50;">bolt</span><span
                     style="font-family: 'GellixSemiBold';">FULL</span></span>
         </div>
+        <div class="x-freeship">
+            Opção de frete grátis disponível
+        </div>
+
+        <style>
+            .x-freeship {
+                background: #3583FA;
+                color: #ffffff;
+                font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 1.4;
+                padding: 1px 10px;
+                display: inline-block;
+                margin-top: 2px;
+            }
+        </style>
 
     </div>
 
-    <button class="pergunta-botao" href="#"
-        onclick="window.open('https://seguro.magazinelar.store/api/public/shopify?product=1611275474158&store=16112' + window.location.search, '_blank')">Comprar</button>
+    <div class="x-stockbar" style="--bar:#3583FA; --track:#ededed; --h:10px; --r:999px; --dur:.6s;">
+        <div class="x-stockbar__label">
+            Restam apenas <span class="x-stockbar__qty">17</span> unidades deste produto
+        </div>
+        <div class="x-stockbar__track" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+            aria-valuenow="{{ fill_percent }}">
+            <div class="x-stockbar__fill" style="width: 15%;"></div>
+        </div>
+    </div>
+
+    <style>
+        .x-stockbar {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+            margin: 10px 0 14px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .x-stockbar__label {
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .x-stockbar__label .x-stockbar__qty {
+            color: var(--bar);
+            font-weight: 700;
+        }
+
+        .x-stockbar__track {
+            position: relative;
+            width: 100%;
+            height: var(--h);
+            background: var(--track);
+            border-radius: var(--r);
+            overflow: hidden;
+        }
+
+        .x-stockbar__fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: var(--bar);
+            border-radius: var(--r);
+            display: block !important;
+            /* força exibição mesmo se div:empty tiver display:none */
+            transition: width var(--dur) cubic-bezier(.22, 1, .36, 1);
+        }
+
+        /* evita ser considerado vazio */
+        .x-stockbar__fill::before {
+            content: "";
+            display: block;
+            height: 0;
+            overflow: hidden;
+        }
+    </style>
+
+    <script>
+        (function () {
+            var min = 12, max = 17;
+            var qty = Math.floor(Math.random() * (max - min + 1)) + min;
+
+            document.querySelectorAll('.x-stockbar__qty').forEach(function (el) {
+                el.textContent = qty;
+            });
+        })();
+    </script>
+
+    <div class="main-container-unico">
+        <a style="font-size: 16px" id="btn-comprar-original-unico" class="btn-compra-estilo-unico"
+            href="https://seguro.magazinelar.store/api/public/shopify?product=1611275474158&store=16112">COMPRAR
+            AGORA</a>
+    </div>
+
+    <div class="main-container-unico2">
+        <a style="font-size: 16px" id="btn-comprar-original-unico" class="btn-compra-estilo-unico2"
+            href="https://seguro.magazinelar.store/api/public/shopify?product=1611275474158&store=16112">Adicionar
+            ao carrinho</a>
+    </div>
+
+    <style>
+        .main-container-unico,
+        .main-container-unico2 {
+            margin-left: 16px;
+            margin-right: 16px;
+        }
 
 
+        .main-container-unico {
+            padding: 0 0px;
+        }
 
+        .main-container-unico2 {
+            padding-top: 7px;
+        }
 
+        .btn-compra-estilo-unico {
+            display: block;
+            width: 100%;
+            padding: 14px 0;
+            background-color: #3583FA;
+            color: #fff;
+            border: none;
+            margin-bottom: 0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+        }
+
+        .btn-compra-estilo-unico2 {
+            display: block;
+            width: 100%;
+            padding: 14px 0;
+            background-color: #E5EDFC;
+            color: #3583FA;
+            border: none;
+            margin-bottom: 0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+        }
+
+        .btn-compra-estilo-unico:hover {
+            background-color: #00a84d;
+            color: #fff;
+        }
+    </style>
 
 
     <div class="info-container">
@@ -169,7 +322,367 @@
 
     <div class="divisoria"></div>
 
+    <style>
+        .mp_platinum {
 
+            min-width: 290px;
+            max-width: 100%;
+            margin: 20px auto 0;
+            padding: 10px;
+            border: 0px solid #0000001a;
+            border-radius: 10px;
+            box-shadow: 0px 8px 4px -4px
+                /*#e5e5e5*/
+                #fff;
+
+        }
+
+        .mp_platinum li {
+            list-style: none;
+        }
+
+        .mp_platinum p {
+            margin: 5px;
+        }
+
+        .ui-box-component-pdp__visible--desktop {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, .1);
+            margin: 24px 0;
+            padding: 32px 16px 24px;
+        }
+
+        .ui-seller-info__status-info {
+            display: -webkit-flex;
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .ui-seller-info__status-info__icon {
+            margin: 2px 10px 0 0;
+            width: 20px;
+            text-align: center;
+        }
+
+        .ui-pdp-color--GREEN.ui-pdp-icon {
+            fill: #00a650;
+        }
+
+        .ui-pdp-seller__status-title {
+
+            font-size: 16px;
+            font-weight: 600;
+            color: #00a650;
+            padding: 0;
+            margin: 2px 0 -12px 0 !important;
+
+        }
+
+        .ui-seller-info__status-info__subtitle {
+
+            font-size: 14px;
+            color: rgba(0, 0, 0, .55);
+            margin: 5px 0 0 0 !important;
+
+        }
+
+        .ui-thermometer {
+
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            overflow: hidden;
+            display: block;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            vertical-align: baseline;
+
+        }
+
+        .ui-thermometer__level {
+            width: 20%;
+            height: 8px;
+            margin-top: 2px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            float: left;
+            border-left: 6px solid #fff;
+        }
+
+        .ui-thermometer__level--1 {
+            background: #fddbdb;
+        }
+
+        .ui-thermometer__level--2 {
+            background: #ffe0b8;
+        }
+
+        .ui-thermometer__level--3 {
+            background: #fff8a5;
+        }
+
+        .ui-thermometer__level--4 {
+            background: #ccff5d;
+        }
+
+        .ui-thermometer[value="5"] .ui-thermometer__level--5 {
+            height: 12px;
+            margin: 0;
+            background: linear-gradient(to top, #09a149, #19c461);
+        }
+
+        .ui-pdp-seller__reputation-info {
+            margin-top: 16px;
+        }
+
+        .ui-pdp-seller__list-description {
+
+            display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .ui-pdp-seller__item-description {
+
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-align-items: center;
+            align-items: center;
+            text-align: center;
+            font-size: 12px;
+            position: relative;
+            line-height: 1;
+            padding: 8px 5px;
+
+        }
+
+        .ui-pdp-seller__sales-description {
+            font-size: 24px;
+            color: #000;
+            line-height: 1.2;
+            font-weight: 400;
+            display: block;
+        }
+
+        .ui-pdp-seller__text-description {
+            margin-top: 8px;
+            line-height: 1;
+        }
+
+        .ui-pdp-seller__item-description:after {
+            background: #ddd;
+            content: "";
+            height: 91%;
+            position: absolute;
+            right: 0;
+            top: 8%;
+            width: 1px;
+        }
+
+        .ui-pdp-seller__item-description:last-of-type:after {
+            display: none;
+        }
+
+        .ui-pdp-seller__icon-description {
+            display: inline-block;
+            width: 28px;
+            padding-top: 3px;
+            vertical-align: top;
+        }
+
+        .ui-pdp-icon,
+        .ui-pdp-icon--shipping {
+            fill: rgba(0, 0, 0, .25);
+        }
+    </style>
+    <div class="mp_platinum">
+
+        <!-- Inicio do Icone  -->
+
+        <div class="ui-seller-info__status-info">
+            <div style="display: flex;"><svg xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003"
+                    xml:space="preserve" width="65px" height="65px" version="1.1"
+                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    viewBox="0 0 2.34 2.34">
+                    <defs>
+                        <style type="text/css">
+                            <![CDATA[
+                            .fil0 {
+                                fill: none
+                            }
+
+                            .fil5 {
+                                fill: #FEFEFE;
+                                fill-rule: nonzero
+                            }
+
+                            .fil3 {
+                                fill: #22B3E8;
+                                fill-rule: nonzero
+                            }
+
+                            .fil2 {
+                                fill: #15BAE3;
+                                fill-rule: nonzero
+                            }
+
+                            .fil1 {
+                                fill: #394476;
+                                fill-rule: nonzero
+                            }
+
+                            .fil4 {
+                                fill: #39447B;
+                                fill-rule: nonzero
+                            }
+                            ]]>
+                        </style>
+                    </defs>
+                    <g id="Camada_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer" />
+                        <rect class="fil0" width="2.34" height="2.34" />
+                        <g id="_2545874963664">
+                            <g>
+                                <path class="fil1"
+                                    d="M2.07 1.5c-0.01,0.02 -0.03,0.03 -0.05,0.03 -0.02,0 -0.03,-0.01 -0.04,-0.03 -0.02,-0.01 -0.02,-0.03 -0.02,-0.06 0,-0.02 0,-0.05 0.02,-0.06 0.01,-0.01 0.02,-0.02 0.04,-0.02 0.02,0 0.04,0.01 0.05,0.02 0.01,0.01 0.02,0.04 0.02,0.06 0,0.03 -0.01,0.05 -0.02,0.06zm0.09 -0.06l0 0c0,-0.04 -0.01,-0.07 -0.03,-0.1 -0.03,-0.03 -0.06,-0.04 -0.11,-0.04 -0.04,0 -0.08,0.01 -0.1,0.04 -0.02,0.03 -0.03,0.06 -0.03,0.1 0,0.04 0.01,0.07 0.03,0.1 0.02,0.03 0.06,0.04 0.1,0.04 0.05,0 0.08,-0.01 0.11,-0.04 0.02,-0.02 0.03,-0.06 0.03,-0.1z" />
+                                <path class="fil1"
+                                    d="M1.51 1.47c0,0.02 0,0.04 -0.02,0.05 -0.01,0.01 -0.02,0.01 -0.04,0.01 -0.01,0 -0.02,0 -0.02,0 -0.01,-0.01 -0.01,-0.02 -0.01,-0.03 0,-0.01 0,-0.02 0.01,-0.03 0.01,0 0.02,-0.01 0.03,-0.01l0.02 0c0.01,0 0.01,-0.01 0.02,-0.01 0,0 0.01,0 0.01,0l0 0.02zm0.04 -0.15c-0.02,-0.01 -0.05,-0.02 -0.08,-0.02 -0.05,0 -0.08,0.01 -0.1,0.04 -0.01,0.01 -0.01,0.03 -0.02,0.05l0.07 0c0,-0.01 0.01,-0.01 0.01,-0.02 0.01,-0.01 0.02,-0.01 0.04,-0.01 0.01,0 0.02,0 0.03,0 0.01,0.01 0.01,0.02 0.01,0.03 0,0.01 0,0.01 -0.01,0.02 -0.01,0 -0.02,0 -0.03,0l-0.02 0.01c-0.03,0 -0.05,0 -0.07,0.01 -0.02,0.02 -0.03,0.04 -0.03,0.07 0,0.03 0,0.05 0.02,0.06 0.02,0.02 0.04,0.02 0.06,0.02 0.15,0.01 0.15,-0.08 0.15,-0.09l0 -0.11c0,-0.03 -0.01,-0.05 -0.03,-0.06z" />
+                                <path class="fil1"
+                                    d="M1.2 1.36c0.02,0 0.03,0.01 0.04,0.02 0,0 0.01,0.01 0.01,0.02l0.07 0c0,-0.03 -0.01,-0.06 -0.04,-0.08 -0.02,-0.01 -0.05,-0.02 -0.08,-0.02 -0.05,0 -0.08,0.01 -0.1,0.04 -0.03,0.03 -0.04,0.06 -0.04,0.11 0,0.04 0.01,0.07 0.04,0.1 0.02,0.02 0.05,0.03 0.1,0.03 0.04,0 0.08,-0.01 0.1,-0.04 0.01,-0.02 0.02,-0.04 0.02,-0.06l-0.07 0c0,0.01 -0.01,0.02 -0.02,0.03 0,0.01 -0.02,0.02 -0.03,0.02 -0.03,0 -0.04,-0.02 -0.05,-0.04 -0.01,-0.01 -0.01,-0.03 -0.01,-0.04 0,-0.03 0,-0.04 0.01,-0.05 0.01,-0.03 0.02,-0.04 0.05,-0.04z" />
+                                <path class="fil1"
+                                    d="M1.04 1.3c-0.15,0 -0.14,0.14 -0.14,0.14l0 0.14 0.07 0 0 -0.13c0,-0.02 0,-0.04 0.01,-0.05 0,-0.02 0.02,-0.03 0.05,-0.03 0,0 0.01,0 0.01,0 0,0 0.01,0 0.01,0l0 -0.07c0,0 0,0 0,0 0,0 -0.01,0 -0.01,0z" />
+                                <path class="fil1"
+                                    d="M0.69 1.37c0.01,-0.01 0.02,-0.01 0.04,-0.01 0.02,0 0.03,0 0.04,0.01 0.01,0.01 0.02,0.03 0.02,0.05l-0.12 0c0,-0.02 0.01,-0.04 0.02,-0.05zm0.09 0.14c0,0 0,0 -0.01,0.01 -0.01,0 -0.02,0.01 -0.04,0.01 -0.01,0 -0.02,-0.01 -0.03,-0.01 -0.02,-0.01 -0.03,-0.03 -0.03,-0.06l0.19 0c0,-0.02 0,-0.04 0,-0.05 0,-0.02 -0.01,-0.04 -0.02,-0.06 -0.01,-0.01 -0.03,-0.03 -0.05,-0.04 -0.02,0 -0.04,-0.01 -0.06,-0.01 -0.04,0 -0.07,0.01 -0.1,0.04 -0.02,0.02 -0.03,0.06 -0.03,0.11 0,0.04 0.01,0.08 0.04,0.1 0.03,0.02 0.06,0.04 0.09,0.04 0.05,0 0.08,-0.02 0.1,-0.04 0.02,-0.02 0.03,-0.03 0.03,-0.04l-0.08 0z" />
+                                <path class="fil1"
+                                    d="M0.57 1.58l-0.06 0 0 -0.16c0,-0.02 -0.01,-0.05 -0.05,-0.05 -0.03,0 -0.05,0.02 -0.05,0.05l0 0.16 -0.07 0 0 -0.16c0,-0.02 0,-0.05 -0.04,-0.05 -0.03,0 -0.05,0.02 -0.05,0.05l0 0.16 -0.07 0 0 -0.16c0,-0.07 0.05,-0.12 0.12,-0.12 0.03,0 0.06,0.01 0.08,0.04 0.02,-0.03 0.05,-0.04 0.08,-0.04 0.07,0 0.11,0.05 0.11,0.12l0 0.16z" />
+                                <path class="fil1"
+                                    d="M1.78 1.5c-0.01,0.02 -0.02,0.03 -0.04,0.03 -0.02,0 -0.04,-0.01 -0.05,-0.03 -0.01,-0.01 -0.01,-0.03 -0.01,-0.06 0,-0.02 0,-0.04 0.01,-0.05 0.01,-0.02 0.03,-0.03 0.05,-0.03 0.01,0 0.02,0.01 0.03,0.02 0.02,0.01 0.03,0.03 0.03,0.07 0,0.02 -0.01,0.04 -0.02,0.05zm0.09 -0.28c0,0 -0.08,-0.01 -0.08,0.05l0 0.07c0,-0.01 -0.01,-0.02 -0.03,-0.03 -0.01,-0.01 -0.02,-0.01 -0.04,-0.01 -0.03,0 -0.06,0.01 -0.08,0.04 -0.03,0.03 -0.04,0.06 -0.04,0.11 0,0.04 0.02,0.07 0.04,0.1 0.02,0.02 0.06,0.03 0.1,0.03 0.13,0 0.13,-0.11 0.13,-0.11l0 -0.25z" />
+                            </g>
+                            <g>
+                                <path class="fil2"
+                                    d="M0.81 1.84c0,-0.03 0,-0.05 -0.01,-0.07 -0.01,-0.01 -0.03,-0.02 -0.05,-0.02 -0.02,0 -0.03,0.01 -0.04,0.02 -0.01,0.02 -0.02,0.04 -0.02,0.07 0,0.02 0.01,0.04 0.02,0.05 0.01,0.02 0.02,0.03 0.04,0.03 0.02,0 0.04,-0.01 0.05,-0.03 0.01,-0.01 0.01,-0.03 0.01,-0.05zm-0.12 0.19c0,0.01 0,0.01 -0.01,0.02 0,0.01 -0.01,0.01 -0.02,0.01l-0.04 0 0 -0.24c0,-0.05 0.02,-0.08 0.05,-0.1 0.01,-0.01 0.04,-0.03 0.09,-0.03 0.03,0 0.07,0.02 0.09,0.04 0.02,0.03 0.03,0.06 0.03,0.1 0,0.05 -0.01,0.08 -0.03,0.11 -0.02,0.02 -0.04,0.04 -0.08,0.04 -0.01,0 -0.03,-0.01 -0.04,-0.01 -0.02,-0.01 -0.03,-0.02 -0.04,-0.04l0 0.1z" />
+                                <path class="fil2"
+                                    d="M1.24 1.84c0,0.04 0.01,0.07 0.04,0.07 0.02,0.01 0.04,0 0.06,-0.02 0,0 0.01,-0.01 0.01,-0.03 0,-0.02 0,-0.03 0,-0.05 0,-0.01 -0.01,-0.03 -0.02,-0.04 -0.01,-0.01 -0.02,-0.02 -0.04,-0.02 -0.02,0 -0.03,0.01 -0.04,0.03 -0.01,0.01 -0.01,0.03 -0.01,0.06zm0.11 0.11l0 -0.01c-0.01,0.01 -0.03,0.03 -0.05,0.03 -0.02,0.01 -0.04,0 -0.06,0 -0.02,-0.01 -0.04,-0.03 -0.05,-0.05 -0.02,-0.02 -0.02,-0.05 -0.02,-0.09 0,-0.04 0.01,-0.07 0.02,-0.1 0.02,-0.03 0.06,-0.04 0.1,-0.04 0.04,0 0.06,0.01 0.09,0.03 0.02,0.02 0.04,0.05 0.04,0.1l0 0.14c0,0.05 -0.03,0.13 -0.13,0.12 -0.06,0 -0.1,-0.03 -0.12,-0.08l0.08 0c0,0.01 0.01,0.01 0.02,0.02 0.01,0 0.02,0 0.03,0 0.02,0 0.03,-0.01 0.04,-0.02 0,-0.01 0.01,-0.03 0.01,-0.05z" />
+                                <path class="fil2"
+                                    d="M1.07 1.86c0,0.03 -0.01,0.04 -0.02,0.05 -0.01,0.01 -0.03,0.02 -0.04,0.02 -0.01,0 -0.02,-0.01 -0.03,-0.01 0,-0.01 -0.01,-0.02 -0.01,-0.03 0,-0.01 0.01,-0.02 0.02,-0.03 0.01,0 0.02,0 0.03,-0.01l0.02 0c0.01,0 0.01,0 0.02,-0.01 0,0 0.01,0 0.01,0l0 0.02zm0.04 -0.15c-0.03,-0.01 -0.05,-0.02 -0.08,-0.02 -0.05,0 -0.08,0.02 -0.1,0.04 -0.01,0.01 -0.02,0.03 -0.02,0.06l0.07 0c0,-0.01 0,-0.02 0.01,-0.03 0.01,-0.01 0.02,-0.01 0.03,-0.01 0.02,0 0.03,0 0.04,0.01 0.01,0 0.01,0.01 0.01,0.02 0,0.01 0,0.01 -0.02,0.02 0,0 -0.01,0 -0.02,0.01l-0.03 0c-0.02,0 -0.05,0.01 -0.06,0.02 -0.02,0.01 -0.04,0.03 -0.04,0.07 0,0.02 0.01,0.04 0.03,0.06 0.01,0.01 0.03,0.02 0.06,0.02 0.15,0 0.15,-0.08 0.15,-0.1l0 -0.1c0,-0.04 -0.01,-0.06 -0.03,-0.07z" />
+                                <path class="fil2"
+                                    d="M1.63 1.9c-0.01,0.01 -0.03,0.02 -0.05,0.02 -0.02,0 -0.03,-0.01 -0.04,-0.02 -0.01,-0.02 -0.02,-0.04 -0.02,-0.07 0,-0.02 0.01,-0.04 0.02,-0.06 0.01,-0.01 0.02,-0.02 0.04,-0.02 0.02,0 0.04,0.01 0.05,0.02 0.01,0.02 0.02,0.04 0.02,0.06 0,0.03 -0.01,0.05 -0.02,0.07zm0.06 -0.17c-0.03,-0.03 -0.06,-0.04 -0.11,-0.04 -0.04,0 -0.08,0.01 -0.1,0.04 -0.02,0.03 -0.03,0.06 -0.03,0.1 0,0.04 0.01,0.08 0.03,0.1 0.02,0.03 0.06,0.05 0.1,0.05 0.05,0 0.08,-0.02 0.11,-0.05 0.02,-0.02 0.03,-0.06 0.03,-0.1 0,-0.04 -0.01,-0.07 -0.03,-0.1z" />
+                            </g>
+                            <g>
+                                <path class="fil3"
+                                    d="M1.17 0.33c-0.33,0 -0.6,0.17 -0.6,0.38 0,0.22 0.27,0.39 0.6,0.39 0.34,0 0.6,-0.17 0.6,-0.39 0,-0.21 -0.26,-0.38 -0.6,-0.38z" />
+                                <path class="fil4"
+                                    d="M1.17 1.1c-0.33,0 -0.6,-0.17 -0.6,-0.39 0,-0.21 0.27,-0.38 0.6,-0.38 0.34,0 0.6,0.17 0.6,0.38 0,0.22 -0.26,0.39 -0.6,0.39zm0 -0.79c-0.34,0 -0.62,0.18 -0.62,0.4 0,0.01 0,0.03 0,0.03 0,0.24 0.24,0.43 0.62,0.43 0.39,0 0.63,-0.19 0.63,-0.43 0,-0.01 0,-0.01 0,-0.03 0,-0.22 -0.28,-0.4 -0.63,-0.4z" />
+                                <path class="fil5"
+                                    d="M1.77 0.68l-0.01 0.01 -0.08 -0.01 -0.16 0.02 -0.14 0.05 0 -0.21 0.04 -0.09 0.03 0 0.03 -0.01 0.06 -0.02 0.04 -0.01 0.02 0 -0.01 -0.04 -0.02 -0.01 0.01 -0.03 -0.03 -0.02 -0.06 -0.04 -0.01 0 -0.06 0.05 -0.07 0.08 -0.08 0.15 -0.1 0.24 -0.05 -0.09 -0.13 -0.28 -0.02 -0.02 -0.09 -0.11 -0.04 -0.02 -0.02 0.01 -0.06 0.05 0 0.03 -0.02 0.01 -0.01 0.02 0.01 0.02 0.05 0.01 0.12 0.03 0.01 0.01 0.01 0.03 0.03 0.09 0 0.17 -0.02 0 -0.05 -0.02 -0.15 -0.04 -0.08 0 -0.09 0c0,0.14 0.07,0.21 0.07,0.21l0.03 -0.02 0.14 0.03 0.22 -0.01 0.11 -0.02 0.03 -0.04 0.01 0.04 0.12 0.03 0.16 0 0.14 -0.02 0.06 -0.01 0.04 0.02c0.08,-0.08 0.07,-0.22 0.07,-0.22z" />
+                                <path class="fil4"
+                                    d="M1.15 0.85c-0.02,0.03 -0.05,0.04 -0.08,0.04 -0.01,0 -0.03,0 -0.04,0 -0.05,0.01 -0.11,0.01 -0.16,0.01l0 0c-0.06,-0.01 -0.12,-0.01 -0.17,-0.02 -0.03,-0.01 -0.04,-0.01 -0.05,0.01 -0.01,0 -0.02,0.01 -0.02,0.02 0,0 0.01,0 0.01,0 0,0.01 0.01,-0.01 0.02,-0.01 0.01,-0.01 0.02,-0.02 0.04,-0.01 0.05,0.01 0.11,0.02 0.17,0.02l0 0c0.02,0 0.03,0 0.05,0 0.04,0 0.07,0 0.11,0 0.01,0 0.03,-0.01 0.04,-0.01 0.04,0 0.07,0 0.1,-0.04 0,0 0,-0.01 -0.01,-0.01 0,0 0,0 -0.01,0z" />
+                                <path class="fil4"
+                                    d="M1.78 0.68c-0.01,0 -0.01,0 -0.01,0 -0.01,0 -0.02,0 -0.03,0 -0.01,-0.01 -0.02,-0.01 -0.03,-0.01 -0.09,0.01 -0.18,0.03 -0.28,0.06 -0.02,0 -0.03,0.01 -0.04,0.01 0,0 0,0 -0.01,0 0,0 0,-0.01 0,-0.02 0.01,-0.04 0.01,-0.09 0.01,-0.13 0,-0.04 0.01,-0.08 0.02,-0.12 0.01,-0.01 0.01,-0.02 0.02,-0.02 0.02,0.01 0.05,0 0.06,-0.01 0.03,-0.01 0.05,-0.02 0.08,-0.02 0.02,0 0.03,-0.01 0.03,-0.03 0.01,-0.02 -0.01,-0.03 -0.02,-0.03 0,0 0,0 0,0 0,-0.01 0,-0.02 0,-0.03 0.01,0 0,0 0,0 -0.01,-0.02 -0.03,-0.03 -0.05,-0.04 -0.01,-0.01 -0.01,-0.01 -0.02,-0.02 -0.02,-0.01 -0.03,-0.01 -0.05,0.01 -0.08,0.06 -0.15,0.15 -0.19,0.27 -0.01,0.02 -0.02,0.04 -0.03,0.06 -0.02,0.06 -0.05,0.12 -0.08,0.17l-0.01 -0.04c-0.02,-0.03 -0.03,-0.07 -0.05,-0.1 -0.01,-0.02 -0.01,-0.03 -0.02,-0.05 -0.02,-0.05 -0.04,-0.1 -0.07,-0.15 -0.02,-0.05 -0.06,-0.09 -0.1,-0.13 -0.02,-0.01 -0.03,-0.02 -0.04,-0.03 -0.01,-0.01 -0.02,-0.02 -0.03,-0.02l0 0c-0.01,0 -0.01,0.01 -0.02,0.01 0,0 -0.01,0.01 -0.02,0.01 -0.01,0.01 -0.03,0.02 -0.04,0.04 -0.01,0.01 -0.01,0.03 -0.01,0.04 -0.01,0 -0.02,0.01 -0.03,0.03 0,0 0,0.01 0,0.01 0,0 0.01,0 0.01,0 0,0.01 0.01,0.02 0.02,0.02 0.02,0 0.04,0.01 0.07,0.02 0.02,0 0.05,0.01 0.07,0.01 0.02,0 0.02,0.01 0.03,0.02 0,0 0,0 0,0.01 0.01,0.02 0.02,0.04 0.02,0.06 0,0.03 0,0.06 0,0.1 0,0.03 0,0.07 0.01,0.1 -0.01,0.01 -0.02,0 -0.03,0 0,-0.01 0,-0.01 -0.01,-0.01 -0.07,-0.02 -0.15,-0.05 -0.24,-0.05 0,0 0,0 0,0 -0.02,0 -0.05,0 -0.07,0l-0.03 0c0,0 -0.01,0 -0.01,0.01 0,0 0.01,0 0.01,0l0.03 0c0.02,0 0.05,0 0.07,0 0,0 0,0 0,0 0.08,0 0.16,0.03 0.24,0.05 0,0.01 0,0.01 0.01,0.01 0,0 0.01,0.01 0.02,0.01 0.01,0 0.01,0 0.02,-0.01 0,0 0,0 0,-0.01 -0.01,-0.03 0,-0.07 0,-0.1 0,-0.04 0,-0.07 -0.01,-0.1 0,-0.02 -0.01,-0.05 -0.02,-0.07 0,0 0,0 0,-0.01 -0.01,-0.02 -0.02,-0.02 -0.04,-0.02 -0.02,0 -0.04,-0.01 -0.07,-0.02 -0.02,-0.01 -0.04,-0.01 -0.07,-0.02 0,0 -0.01,0 -0.01,0 0,-0.01 0,-0.01 -0.01,-0.01 0.01,-0.01 0.02,-0.02 0.03,-0.02 0,0 0,0 0,0 0,0 0,0 0,0 0.02,0.01 0.05,0.04 0.08,0.02 0.01,0.01 0.03,0.02 0.04,0.03 0,0 0,0 0.01,0 0,0 0,0 0,0 0,0 0,-0.01 0,-0.01 -0.02,-0.01 -0.04,-0.03 -0.05,-0.05 -0.01,-0.01 -0.01,-0.02 -0.02,-0.02 0,-0.01 0,-0.01 -0.01,0 0,0 0,0 0,0.01 0.01,0 0.01,0.01 0.02,0.02 0,0 0,0 0,0 -0.02,0.02 -0.04,0.01 -0.06,-0.01 -0.01,-0.01 -0.01,-0.02 0,-0.03 0.01,-0.02 0.02,-0.02 0.04,-0.03 0.01,-0.01 0.01,-0.01 0.02,-0.02 0.01,0 0.02,0 0.03,0 0.01,0.02 0.02,0.03 0.04,0.04 0.04,0.04 0.08,0.08 0.1,0.13 0.02,0.05 0.05,0.1 0.07,0.14 0,0.02 0.01,0.04 0.02,0.06 0.01,0.03 0.03,0.06 0.04,0.1l0.02 0.04c0,0 0.01,0.01 0.01,0.01 -0.01,0.01 -0.01,0.02 0,0.04 0.01,0.02 0.02,0.04 0.04,0.05 0.02,0.01 0.04,0.01 0.05,0.01l0.01 0c0.06,0.01 0.11,0.01 0.16,0.01 0.02,0 0.04,0 0.06,0 0.05,0 0.1,-0.01 0.15,-0.02 0.03,-0.01 0.04,0 0.05,0.02 0.01,0 0.02,0.01 0.02,0 0,-0.01 0,-0.01 -0.01,-0.01 -0.01,-0.02 -0.03,-0.03 -0.06,-0.02 -0.05,0.01 -0.1,0.01 -0.15,0.02 -0.07,0 -0.14,0 -0.21,-0.01l-0.01 0c-0.02,0 -0.04,-0.01 -0.05,-0.01 -0.02,-0.01 -0.03,-0.03 -0.04,-0.05 0,-0.01 0,-0.02 0,-0.03 0.03,-0.06 0.06,-0.12 0.08,-0.18 0.01,-0.02 0.02,-0.05 0.03,-0.07 0.05,-0.11 0.11,-0.2 0.19,-0.26 0.01,-0.01 0.02,-0.02 0.03,-0.01 0.01,0.01 0.02,0.01 0.02,0.02 0.02,0.01 0.04,0.02 0.05,0.03 -0.01,0.03 -0.02,0.04 -0.03,0.05 -0.01,0 -0.02,0 -0.04,-0.01 0.01,-0.01 0.01,-0.02 0.02,-0.03 0,-0.01 0,-0.01 0,-0.01 0,0 -0.01,0 -0.01,0 -0.02,0.03 -0.04,0.06 -0.07,0.08 -0.01,0 -0.01,0.01 0,0.01 0,0 0,0 0,0 0,0 0,0 0,0 0.02,-0.01 0.04,-0.02 0.05,-0.03 0.02,0 0.04,0.01 0.06,0 0.01,-0.01 0.01,-0.01 0.02,-0.02 0,0 0,0 0,0 0.02,0.01 0.02,0.01 0.02,0.02 0,0.01 -0.01,0.02 -0.02,0.02 -0.03,0 -0.05,0.01 -0.08,0.02 -0.02,0.01 -0.04,0.01 -0.05,0.01 -0.03,0 -0.03,0.01 -0.04,0.02 -0.01,0.04 -0.03,0.09 -0.03,0.13 0,0.04 0,0.09 0,0.13 0,0.01 0,0.02 0,0.03 0,0 0,0 0,0 -0.01,0 -0.01,0.01 -0.01,0.01 0,0 0,0 0,0.01 0,0 0.01,0 0.01,0 0,0 0,0 0,0 0,0 0,-0.01 0,-0.01 0.01,0 0.01,0 0.01,0 0,0 0,0 0,0 0.01,0 0.01,-0.01 0.02,-0.01 0.01,0 0.02,-0.01 0.03,-0.01 0.1,-0.03 0.19,-0.05 0.28,-0.05 0.01,0 0.01,0 0.02,0 0.01,0 0.03,0.01 0.04,0 0.01,0 0.01,-0.01 0.01,-0.01z" />
+                            </g>
+                        </g>
+                    </g>
+                </svg></div>
+
+
+
+            <div style="margin: 9px 0 0px 11px;">
+                <p class="ui-seller-info__status-info__title ui-pdp-seller__status-title">MercadoLíder Platinum</p>
+                <p class="ui-seller-info__status-info__subtitle">
+
+                    Um dos melhores sites!
+
+                </p>
+            </div>
+        </div>
+
+        <!-- Fim do Icone  -->
+
+        <div class="ui-seller-info">
+
+            <!-- Inicio do Termometro  -->
+
+            <ul aria-hidden="true" class="ui-thermometer" value="5">
+                <li class="ui-thermometer__level ui-thermometer__level--1"></li>
+                <li class="ui-thermometer__level ui-thermometer__level--2"></li>
+                <li class="ui-thermometer__level ui-thermometer__level--3"></li>
+                <li class="ui-thermometer__level ui-thermometer__level--4"></li>
+                <li class="ui-thermometer__level ui-thermometer__level--5"></li>
+            </ul>
+
+            <!-- Fim do Termometro  -->
+
+            <div class="ui-pdp-seller__reputation-info">
+                <ul class="ui-pdp-seller__list-description">
+                    <li class="ui-pdp-seller__item-description">
+
+
+                        <!-- Inicio Quantidade de Vendas  -->
+
+                        <strong class="ui-pdp-seller__sales-description">5.249</strong>
+
+                        <!-- Fim Quantidade de Vendas  -->
+
+                        <p class="ui-pdp-seller__text-description">Pedidos entregues nos últimos 60 dias</p>
+                    </li>
+                    <li class="ui-pdp-seller__item-description">
+                        <strong aria-hidden="true" class="ui-pdp-seller__icon-description">
+                            <svg class="ui-pdp-icon ui-pdp-icon--message-positive ui-pdp-color--REP_SELLER_ATTENTION_GOOD"
+                                viewBox="0 0 29 24" xmlns="http://www.w3.org/2000/svg">
+                                <g fill-rule="evenodd" fill="none">
+                                    <path
+                                        d="M6.747 21.511l4.538-3.518h8.238c1.032 0 1.868-.98 1.868-2.19V3.21c0-1.21-.836-2.19-1.868-2.19H3.173c-1.032 0-1.869.98-1.869 2.19v14.077c0 .39.316.706.706.706H5.61v2.96a.706.706 0 0 0 1.138.558z"
+                                        stroke-width="1.5" stroke="#333"></path>
+                                    <g transform="translate(14 9)">
+                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#39B54A"></circle>
+                                        <g stroke-linecap="round" stroke-width="1.059" stroke="#FFF">
+                                            <path d="M3.75 7.5l2.445 2.445M6.25 9.89L11.14 5"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </strong>
+                        <p class="ui-pdp-seller__text-description">Presta bom atendimento</p>
+                    </li>
+                    <li class="ui-pdp-seller__item-description">
+                        <strong aria-hidden="true" class="ui-pdp-seller__icon-description">
+                            <svg class="ui-pdp-icon ui-pdp-icon--time-positive ui-pdp-color--REP_SELLER_DELIVERY_TIME_GOOD"
+                                viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+                                <g fill-rule="evenodd" fill="none">
+                                    <g transform="translate(1 .02)" stroke="#333">
+                                        <ellipse cx="10.5" cy="13.714" rx="10.5" ry="10.286" stroke-width="1.286">
+                                        </ellipse>
+                                        <path
+                                            d="M19.107 13.714h-1.59M3.42 13.714H1.83M10.5 5.143v1.59M10.563 20.571v1.59M10.5.857v2.484M8.75.857h3.637M10.313 8.801v4.944H5.24"
+                                            stroke-linecap="round" stroke-width="1.102"></path>
+                                    </g>
+                                    <g transform="translate(15 10.02)">
+                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#39B54A"></circle>
+                                        <g stroke-linecap="round" stroke-width="1.059" stroke="#FFF">
+                                            <path d="M3.75 7.5l2.445 2.445M6.25 9.89L11.14 5"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </strong>
+                        <p class="ui-pdp-seller__text-description">Entrega os produtos dentro do prazo</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
 
     <p style="padding-left: 4%; font-family: 'GellixRegular'; font-size: 20px; padding-top: 15px;"></p>
 
@@ -285,7 +798,8 @@
                         Acessibilidade Informações sobre seguros Blog Afiliados Tendências</span><br><br>© 1999-2024
                     Ebazar.com.br LTDA.CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas, nº 3.003, Bonfim, Osasco/SP
                     - CEP 06233-903 - empresa do grupo Mercado Livre.<span
-                        style="font-family: 'GellixSemiBold';"><br><br>Brasil/Português</span></p>
+                        style="font-family: 'GellixSemiBold';"><br><br>Brasil/Português</span>
+                </p>
 
                 <script src="js/scripts.js"></script>
 
